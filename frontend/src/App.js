@@ -1,9 +1,24 @@
 import React from 'react'
-
+//import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Outlet } from 'react-router-dom';
 const App = () => {
   return (
-    <h1>Aritra Ganguly E-Commerce</h1>
-  )
-}
+    <>
+    <Header/>
+    <main className='py-3'>
+      <Container>
+        <Outlet/>
+    </Container>
+    </main>
+    <Footer/>
+    <ToastContainer/>
+    </>
+  );
+};
 
 export default App
